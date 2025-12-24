@@ -10,7 +10,7 @@ class TaskScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Provider To-Do (${Provider.of<TaskData>(context).taskCount})'),
-        backgroundColor: Colors.blue,
+        backgroundColor: const Color.fromARGB(255, 182, 222, 255),
       ),
       body: Consumer<TaskData>(
         builder: (context, taskData, child) {
@@ -43,7 +43,7 @@ class TaskScreen extends StatelessWidget {
         },
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.green,
+        backgroundColor: const Color.fromARGB(255, 149, 255, 250),
         child: Icon(Icons.add),
         onPressed: () {
           showModalBottomSheet(
@@ -71,7 +71,7 @@ class AddTaskSheet extends StatelessWidget {
           Text(
             'Tambah Tugas',
             textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 24, color: Colors.green),
+            style: TextStyle(fontSize: 24, color: const Color.fromARGB(255, 135, 220, 251)),
           ),
           TextField(
             autofocus: true,
