@@ -19,8 +19,8 @@ class TaskData extends ChangeNotifier {
 
   int get taskCount => _tasks.length;
 
-  void addTask(String newTask) {
-    _tasks.add(Task(name: newTask));
+  void addTask(String newTaskTitle) {
+    _tasks.add(Task(name: newTaskTitle));
     // Memberitahu semua widget yang mendengarkan (Listeners) untuk rebuild
     notifyListeners();
   }
